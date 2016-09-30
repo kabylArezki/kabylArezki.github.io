@@ -10,9 +10,18 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="heanderAndFooter.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="/resources/demos/style.css">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script>
+            $(function () {
+                $("#accordion").accordion();
+            });
+        </script>
     </head>
     <body>
-         <header>
+        <header>
             <h1>Projets</h1>
         </header>
         <nav>
@@ -25,7 +34,35 @@ and open the template in the editor.
             <a href="Liens.html">Liens</a>
             <a href="Contact.html">Contact</a>
         </nav>
-         <div class="docInfo">fr/contact.txt · Dernière modification: 2016/09/30 13:29 par KERKAR Arezki</div>
+        <div id="accordion">
+            <h3>Projet 1</h3>
+            <div>
+                <p>
+                    
+                </p>
+            </div>
+            <h3>Projet 2</h3>
+            <div>
+                <p>
+
+                </p>
+            </div>
+            <h3>Projet 3</h3>
+            <div>
+                <p>
+                    
+                </p>
+
+            </div>
+            <h3>Projet 4</h3>
+            <div>
+                <p>
+
+                </p>
+              
+            </div>
+        </div>
+        <div class="docInfo">fr/contact.txt · Dernière modification: 2016/09/30 13:29 par KERKAR Arezki</div>
         <footer>
             <div class="buttons">
                 <a href="http://www.dokuwiki.org/donate" title="Donate" target="_blank"><img
