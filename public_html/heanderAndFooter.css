@@ -8,34 +8,46 @@ and open the template in the editor.
     Author     : Arezki
 */
 html {
-    height: 100%
+    margin: auto;
+
+    width: 832px;
+
 }
 body {
-    font-family: Verdana, Geneva, sans-serif;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    
+
+    background-color:#ccccff;
+    width: 832px;
+
+}
+header h1{
+    position:absolute;
+    top: 80px;
+  left: 700px;
+    font-size: 200%;
+    color: black
 }
 header{
-    font: bolder;
-    font-size: 500%;
-    color: black;
-    background: blanchedalmond;
-    
-    
+    background-image:url( image/Headers.png);
+    background-repeat: no-repeat;
+    width: 832px;
+    height: 251px;
+
+
+
 }
 nav   {
 
     padding: 3px 0;   /* 3px top and bottom, 0px left and right */
     margin: 10px 0px 10px 0px;  /* top right bottom left */ 
     border-bottom: 1px solid #778; /* width style color */
-    /* font: bold 12px Verdana, sans-serif; */ 
+    width: 832px;
+
 }
 
 nav  {
     list-style: none; /* No marker is shown */
     margin: 0; 
-    
+
     text-align: center
 
 }
@@ -46,13 +58,14 @@ nav  a {
     margin-left: 3px; 
     border: 1px solid #669; 
     border-bottom: none; 
-    background: #ccf; 
+    background: dodgerblue; 
     text-decoration: none; 
+    color: aliceblue
 
 
 }
 h1{
-    
+
     backface-visibility: hidden;
     font-size: 80%;
     alignment-adjust: central;
@@ -63,27 +76,43 @@ nav{
     nav-down: auto;
     text-align: center
 }
-.docInfo{
+.docInfo {
     margin: 1em;
     font: 80% serif ;
-    color: #ffffff;
-    background: skyblue;
-    text-align: center
-    
-    
-    
-}
-.buttons{
+    color:#669;
+    background: #ffffff;
     text-align: center;
+    bottom: 1em;
+    position: fixed;
+    left: 500px;
+
+
+
+
 }
+
 section{
     margin: 0.5em;
     padding: 2em;
-    
+
 }
 h2 ul il{
     border-style: outset;
     border-color: #ffffff;
     background: #cc00cc
-        
+
+}
+.arezki{
+    position: absolute;
+    top: 340px;
+    left: 800px;
+}
+footer{
+    background-image: url(imge/footer_bg.jpg);
+    bottom: 0;
+    position: fixed;
+    left: 500px;
+    width: 832px;
+
+
 }
