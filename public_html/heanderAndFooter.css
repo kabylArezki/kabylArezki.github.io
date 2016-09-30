@@ -1,0 +1,89 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 29 sept. 2016, 20:43:25
+    Author     : Arezki
+*/
+html {
+    height: 100%
+}
+body {
+    font-family: Verdana, Geneva, sans-serif;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+}
+header{
+    font: bolder;
+    font-size: 500%;
+    color: black;
+    background: blanchedalmond;
+    
+    
+}
+nav   {
+
+    padding: 3px 0;   /* 3px top and bottom, 0px left and right */
+    margin: 10px 0px 10px 0px;  /* top right bottom left */ 
+    border-bottom: 1px solid #778; /* width style color */
+    /* font: bold 12px Verdana, sans-serif; */ 
+}
+
+nav  {
+    list-style: none; /* No marker is shown */
+    margin: 0; 
+    
+    text-align: center
+
+}
+
+
+nav  a {
+    padding: 3px 0.5em; 
+    margin-left: 3px; 
+    border: 1px solid #669; 
+    border-bottom: none; 
+    background: #ccf; 
+    text-decoration: none; 
+
+
+}
+h1{
+    
+    backface-visibility: hidden;
+    font-size: 80%;
+    alignment-adjust: central;
+    color: black;
+    text-align: center
+}
+nav{
+    nav-down: auto;
+    text-align: center
+}
+.docInfo{
+    margin: 1em;
+    font: 80% serif ;
+    color: #ffffff;
+    background: skyblue;
+    text-align: center
+    
+    
+    
+}
+.buttons{
+    text-align: center;
+}
+section{
+    margin: 0.5em;
+    padding: 2em;
+    
+}
+h2 ul il{
+    border-style: outset;
+    border-color: #ffffff;
+    background: #cc00cc
+        
+}
