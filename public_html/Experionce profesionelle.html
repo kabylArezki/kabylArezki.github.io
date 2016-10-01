@@ -10,6 +10,15 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="heanderAndFooter.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="/resources/demos/style.css">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script>
+            $(function () {
+                $("#accordion").accordion();
+            });
+        </script>
     </head>
     <body>
 
@@ -26,147 +35,185 @@ and open the template in the editor.
             <a href="Liens.html">Liens</a>
             <a href="Contact.html">Contact</a>
         </nav>
-        <section> 
-            <h2><a name="experience">Experionce profesionelle</a></h2>
-            <ul>
+        <div id="accordion">
+            <h3 ><strong>Compétences et connaissances techniques  </strong> </h3>
+            <div class="exp">         
+                <p>
+                    <strong>Programmation:</strong> JAVA (SE), JEE, SQL (Oracle), XML, JavaScript, CSS, HTML, Shell Linux, C/C++, Arduino, Github,SVN,OCL <br>
+                    Langage Machine (ARM), JUnit.<br>
+                    <strong>Modélisation :</strong> UML, méta-modèle.<br>
+                    <strong>Serveurs web et d'application :</strong> Apache, Tomcat.<br>
+                    <strong>Outils:</strong> Netbeans, Eclipse, SQLDeveloper, Eclipse Modeling Project, Acceleo, Sirius. MOF2Text, QVT.<br>
+                    <strong>OS:</strong> Linux (Ubuntu, Fedora), Windows.<br>
+                    <strong>Logiciels de simulation :</strong> SICRE, ETAP, DIALux7, FEMM, Matlab/Simulink ,openERP,ODOO,GanttProject,qcadoo,Alpha-3i<br>
+                </p>
+            </div>
+            <h3><strong>Travail  </strong></h3>
+            <div class="exp">
+
+                <p>
+                <ul>
+
+                    <li><h3>Octobre 2013 – Août 2014 : Ingénieur maintenance électrique chez SARL S.T.S (Société Tréfilerie de Soummam), Algérie.</h3>
+                </ul>
+                </p>
+            </div>
+                <h3><strong>Stages</strong></h3>
+                <div class="exp">
+                    <p>
+
+                 
+                    <ul>
+
+                        <li><h3>2016, 6 mois : Stage chez IRT SystemX.</h3>
+
+                            <h3>Sujet : Etude de l’interopérabilité entre les systèmes d’informations ERP et MES en se basant sur le standard ISA95 et<br>
+
+                                développement d’un démonstrateur de test des implémentations de ce standard</h3>
+
+                            <p>Taches obligatoires à faire :</p>
+                            <ul>
+
+                                <li>Développement des feuilles de transformation XSLT pour le cas de la nomenclature DEKENZ basée sur ISA95</li>
+
+                                <li>Développement des feuilles de transformation XSLT pour le cas d’un planning de production pour DEKENZ basée sur<br>
+
+                                    ISA95</li>
+
+                                <li>Déploiement et mise à disposition des modèles de processus des workflows décrits sur Jawe pour l’automatisation des<br>
+
+                                    scénarios d’échange ERP/MES </li>
+                            </ul>
+
+                            <p>Taches optionnelles :</p>
+                            <ul>
+                                <li>Déploiement automatique des scénarios sur la plateforme SIP : Application de la démarche MDA avec la création des <br>
+
+                                    modèles de workflow exécutable correspondant aux scénarios de test.</li>
+
+                                <li>Développement des composants de référence de MES et de connecteur d’extraction de fichiers XML de l’ERP</li>
+
+                                <li>Développement des feuilles de transformation XSLT basée sur AP242 et comparaison avec ISA95</li>
+                            </ul>
+                            <p>Environnement technique:</p> XML, XSLT, Java, Connaissances du monde industriel et des systèmes d’information ERP et La MES <br>
+
+                            connaissance du standard ISA 95, Workflows et l’ingénierie dirigée par les modèles.
+
+                        <li><h3>2016, 3 mois : Projet Universitaire chez IM2AG </h3>
+
+                            <h3>Sujet : Conception et développement d’une application web pour la gestion des Jeux olympiques <br>
+
+                                JAVA/JEE</h3>
+
+                            <p>Taches:</p>
+                            <ul>
+
+                                <li>Conception de l’application(Uml2)</li>
+
+                                <li>Développements de l’application (Java/JEE), revue de codes, tests unitaires et d’intégrations</li>
+
+                                <li>Recette de l’application : tests unitaires et d’intégrations(Junit), et fonctionnels </li>
+
+                            </ul>
+                            <p>Environnement technique:</p>Eclipse, Tomcat6, Java, JEE, Git, Uml2, Html/CSS, JavaScript, Oracle 11g.
+
+
+                        <li><h3>2015, 6 mois : Stage de fin d’études chez EDF (Electricité De France)</h3>
+
+                            <h3> Sujet : Consultation affaire domaine Electrotechnique, appui à la maîtrise d’ouvrage.</h3>
+
+                            <ul>
+
+                                <li>Étude de faisabilité d'installation d'un secours «essentiel» barrage (groupe électrogène).</li>
+
+                                <li>Groupe de restitution (génératrice asynchrone) vérification dimensionnement condensateur de compensation.
+                                </li>
+
+                                <li>Remplacement(RGU) régulateur de tension groupes. </li>
+                                <li>Étude et installation d'un dispositif de mesure et transmission cote retenue.</li>
+                                <li>Étude et installation vitesse groupe, information, seuil de protection et afficheur.</li>
+
+                            </ul>
+
+                            <p>Missions/Activités confiées :</p>
+                            <ul>
+                                <li>Prise en compte du besoin, rédaction du CEB et validation par le chargé d’exploitation.
+                                </li>
+
+                                <li>Rédaction du (CCTP) Cahier des clauses techniques particulières et DCE (dossier de consultation entreprise).
+                                </li>
+
+                                <li>Analyse des offres techniques et aide à la décision.</li>
+                                <li>Rattachement fonctionnel aux ingénieurs Performance-Production et Maintenance.</li>
+                                <li>Déplacement éventuel sur des sites sur de production.</li>
+                            </ul>      
+
+                        <li><h3>Octobre 2014-mars 2015 : Projet au laboratoire « Université de Lorraine »</h3>
+
+                            <h3> Sujet : Mise en place d’une régulation du facteur de puissance d’une installation éclectique par un compensateur synchrone.</h3>
+
+
+                            <ul>
+
+                                <li>Modélisation et simulation du système (électronique de puissance, moteur électrique, capteurs de mesure de facteur de<br>
+
+                                    puissance, le réseau électrique).</li>
+
+                                <li>Détermination de la fonction de transfère du système et mise en place d’une loi de commande pour calculer les paramètres<br>
+
+                                    du correcteur pour la régulation du facteur de puissance.</li>
+
+                                <li>Validation expérimentale du modèle. </li>
+
+                            </ul>
+
+
+
+
+                            <ul>
+
+                                <li>Modélisation et simulation du système (électronique de puissance, moteur électrique, capteurs de mesure de facteur de<br>
+
+                                    puissance, le réseau électrique).</li>
+
+                            </ul>
+
+                        <li><h3>2013, 7 mois : Stage de fin d’études chez SONELGAZ (Société Nationale Algérienne d’électricité et du gaz), en collaboration avec<br>
+
+                                CDER (Centre de Développement des Energies Renouvelables).</h3>
+
+                            <h3> Sujet : Elaboration d’un nouveau plan de défense du réseau électrique isolé Adrar - Kerbatine avec sans l’intégration de<br>
+
+                                l’énergie éolienne.</h3>
+
+
+                            <ul>
+
+                                <li>Simulation et étude sur les deux logiciels SICRE et ETAP.</li>
+                                <li>Comparaison du plan de défense existant du réseau isolé avec et sans éoliennes.</li>
+                                <li>Proposition d’un nouveau plan de défense pour un réseau isolé avec intégration d’énergie éolienne.</li>
+
+                            </ul>
+
+                            <p>Ce stage a fait l’objet d’un article de conférence internationale :</p> IET International conference on Renewable Power
+
+                            Generation, September 2014, Ramada Naples, Italy
+
+                    </ul>
+
+
+
+                    </p>
                 
-                <li><h3>2016, 6 mois : Stage chez IRT SystemX.</h3>
-                    
-                        <h3>Sujet : Etude de l’interopérabilité entre les systèmes d’informations ERP et MES en se basant sur le standard ISA95 et<br>
-
-                        développement d’un démonstrateur de test des implémentations de ce standard</h3>
-
-                    <p>Taches obligatoires à faire :</p>
-                    <ul>
-
-                        <li>Développement des feuilles de transformation XSLT pour le cas de la nomenclature DEKENZ basée sur ISA95</li>
-
-                        <li>Développement des feuilles de transformation XSLT pour le cas d’un planning de production pour DEKENZ basée sur<br>
-
-                            ISA95</li>
-
-                        <li>Déploiement et mise à disposition des modèles de processus des workflows décrits sur Jawe pour l’automatisation des<br>
-
-                            scénarios d’échange ERP/MES </li>
-                    </ul>
-
-                    <p>Taches optionnelles :</p>
-                    <ul>
-                        <li>Déploiement automatique des scénarios sur la plateforme SIP : Application de la démarche MDA avec la création des <br>
-
-                            modèles de workflow exécutable correspondant aux scénarios de test.</li>
-
-                        <li>Développement des composants de référence de MES et de connecteur d’extraction de fichiers XML de l’ERP</li>
-
-                        <li>Développement des feuilles de transformation XSLT basée sur AP242 et comparaison avec ISA95</li>
-                    </ul>
-                    <p>Environnement technique:</p> XML, XSLT, Java, Connaissances du monde industriel et des systèmes d’information ERP et La MES <br>
-
-                    connaissance du standard ISA 95, Workflows et l’ingénierie dirigée par les modèles.
-
-                <li><h3>2016, 3 mois : Projet Universitaire chez IM2AG </h3>
-
-                        <h3>Sujet : Conception et développement d’une application web pour la gestion des Jeux olympiques <br>
-
-                        JAVA/JEE</h3>
-
-                    <p>Taches:</p>
-                    <ul>
-
-                        <li>Conception de l’application(Uml2)</li>
-
-                        <li>Développements de l’application (Java/JEE), revue de codes, tests unitaires et d’intégrations</li>
-
-                        <li>Recette de l’application : tests unitaires et d’intégrations(Junit), et fonctionnels </li>
-
-                    </ul>
-                    <p>Environnement technique:</p>Eclipse, Tomcat6, Java, JEE, Git, Uml2, Html/CSS, JavaScript, Oracle 11g.
 
 
-                <li><h3>2015, 6 mois : Stage de fin d’études chez EDF (Electricité De France)</h3>
 
-                    <h3> Sujet : Consultation affaire domaine Electrotechnique, appui à la maîtrise d’ouvrage.</h3>
+            </div>
 
-                    <ul>
-
-                        <li>Étude de faisabilité d'installation d'un secours «essentiel» barrage (groupe électrogène).</li>
-
-                        <li>Groupe de restitution (génératrice asynchrone) vérification dimensionnement condensateur de compensation.
-                        </li>
-
-                        <li>Remplacement(RGU) régulateur de tension groupes. </li>
-                        <li>Étude et installation d'un dispositif de mesure et transmission cote retenue.</li>
-                        <li>Étude et installation vitesse groupe, information, seuil de protection et afficheur.</li>
-
-                    </ul>
-
-                    <p>Missions/Activités confiées :</p>
-                    <ul>
-                        <li>Prise en compte du besoin, rédaction du CEB et validation par le chargé d’exploitation.
-                        </li>
-
-                        <li>Rédaction du (CCTP) Cahier des clauses techniques particulières et DCE (dossier de consultation entreprise).
-                        </li>
-
-                        <li>Analyse des offres techniques et aide à la décision.</li>
-                        <li>Rattachement fonctionnel aux ingénieurs Performance-Production et Maintenance.</li>
-                        <li>Déplacement éventuel sur des sites sur de production.</li>
-                    </ul>      
-
-                <li><h3>Octobre 2014-mars 2015 : Projet au laboratoire « Université de Lorraine »</h3>
-
-                    <h3> Sujet : Mise en place d’une régulation du facteur de puissance d’une installation éclectique par un compensateur synchrone.</h3>
+        </div>
 
 
-                    <ul>
-
-                        <li>Modélisation et simulation du système (électronique de puissance, moteur électrique, capteurs de mesure de facteur de<br>
-
-                            puissance, le réseau électrique).</li>
-
-                        <li>Détermination de la fonction de transfère du système et mise en place d’une loi de commande pour calculer les paramètres<br>
-
-                            du correcteur pour la régulation du facteur de puissance.</li>
-
-                        <li>Validation expérimentale du modèle. </li>
-
-                    </ul>
-
-                <li><h3>Octobre 2013 – Août 2014 : Ingénieur maintenance électrique chez SARL S.T.S (Société Tréfilerie de Soummam), Algérie.</h3>
-
-
-                    <ul>
-
-                        <li>Modélisation et simulation du système (électronique de puissance, moteur électrique, capteurs de mesure de facteur de<br>
-
-                            puissance, le réseau électrique).</li>
-
-                    </ul>
-
-                <li><h3>2013, 7 mois : Stage de fin d’études chez SONELGAZ (Société Nationale Algérienne d’électricité et du gaz), en collaboration avec<br>
-
-                        CDER (Centre de Développement des Energies Renouvelables).</h3>
-
-                    <h3> Sujet : Elaboration d’un nouveau plan de défense du réseau électrique isolé Adrar - Kerbatine avec sans l’intégration de<br>
-
-                        l’énergie éolienne.</h3>
-
-
-                    <ul>
-
-                        <li>Simulation et étude sur les deux logiciels SICRE et ETAP.</li>
-                        <li>Comparaison du plan de défense existant du réseau isolé avec et sans éoliennes.</li>
-                        <li>Proposition d’un nouveau plan de défense pour un réseau isolé avec intégration d’énergie éolienne.</li>
-
-                    </ul>
-
-                    <p>Ce stage a fait l’objet d’un article de conférence internationale :</p> IET International conference on Renewable Power
-
-                    Generation, September 2014, Ramada Naples, Italy
-
-            </ul>
-        </section>
-         <div class="docInfo">fr/contact.txt · Dernière modification: 2016/09/30 13:29 par KERKAR Arezki</div>
+        <div class="docInfo">fr/contact.txt · Dernière modification: 2016/09/30 13:29 par KERKAR Arezki</div>
         <footer>
             <div class="buttons">
                 <a href="http://www.dokuwiki.org/donate" title="Donate" target="_blank"><img
