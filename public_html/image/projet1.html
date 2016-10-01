@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Projet1</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <!--formulaire-->
+        <label><input type="radio" name="check" value="1" /> Case n°1</label><br />
+        <label><input type="radio" name="check" value="2" /> Case n°2</label><br />
+        <label><input type="radio" name="check" value="3" /> Case n°3</label><br />
+        <label><input type="radio" name="check" value="4" /> Case n°4</label>
+        <br /><br />
+        <input type="button" value="Afficher la case cochée" onclick="check();" />
+
+        <script>
+            function check() {
+                var inputs = document.getElementsByTagName('input'),
+                        inputsLength = inputs.length;
+
+                for (var i = 0; i < inputsLength; i++) {
+                    if (inputs[i].type === 'radio' && inputs[i].checked) {
+                        alert('La case cochée est la n°' + inputs[i].value);
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>
