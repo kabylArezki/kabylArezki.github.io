@@ -21,13 +21,16 @@ body {
 }
 header h1{
     position:absolute;
-    top: 80px;
+    top: 120px;
   left: 700px;
     font-size: 200%;
     color: black
 }
 header{
-    background-image:url( image/Headers.png);
+   //background-image:url( image/Headers.png);
+   // background-image:url(image/Couverture-facebook-net-3.jpg);
+   //background-image:url(image/couverture.jpg);
+   background-image:url(image/footer_bg.jpg);
     background-repeat: no-repeat;
     width: 832px;
     height: 251px;
