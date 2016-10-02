@@ -9,27 +9,105 @@ and open the template in the editor.
         <title>Projet1</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="projet1.js" type="text/javascript"></script>
+        <link href="projet1.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
-        <!--formulaire-->
-        <label><input type="radio" name="check" value="1" /> Case n°1</label><br />
-        <label><input type="radio" name="check" value="2" /> Case n°2</label><br />
-        <label><input type="radio" name="check" value="3" /> Case n°3</label><br />
-        <label><input type="radio" name="check" value="4" /> Case n°4</label>
-        <br /><br />
-        <input type="button" value="Afficher la case cochée" onclick="check();" />
 
-        <script>
-            function check() {
-                var inputs = document.getElementsByTagName('input'),
-                        inputsLength = inputs.length;
+        <table border="2" width="300px" height="120px">
+            <tr>
+                <td><input type="button" value="Nom:" name="Nom:" /></td>
+                <td><input type="text" name="Nom:" value="" size="6" /></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="Telephone:" name="Téléphone:" /></td>
+                <td><input type="text" name="Nom:" value="" size="12" /></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="Adresse:" name="Adresse:" /></td>
+                <td><input type="text" name="Nom:" value="" size="6" /></td>
+            </tr>
+        </table>
+        <br>
+        <div class="valide">
+            <input type="submit" value="Valider" name="valider" style="margin: auto" />
+        </div>
+        <hr>
+        <h1><strong>Initiation à JavaScript</strong></h1>
+        <hr>
+        <div>
+            <h1>Écriture d'une fonction simple</h1>
 
-                for (var i = 0; i < inputsLength; i++) {
-                    if (inputs[i].type === 'radio' && inputs[i].checked) {
-                        alert('La case cochée est la n°' + inputs[i].value);
-                    }
-                }
-            }
-        </script>
+            <p>Cliquez sur le bouton pour lancer la fonction&nbsp;: <button id="butt" onclick="surfaceRectangle()">Lancer la fonction</button></p>
+        </div>
+        <hr>
+        <h1>Écriture d'une fonction complexe</h1>
+
+        <p>Cliquez sur le bouton pour lancer la fonction&nbsp;: <button onclick="alert('Surface du cercle  :' + surfaceCercle())">Lancer la fonction</button></p>
+        <hr>
+        <h1>Écriture d'une fonction avec arguments</h1>
+
+        <p>Cliquez sur le bouton pour lancer la fonction&nbsp;: <button onclick="affiche()">Lancer la fonction</button></p>
+        <hr>
+        <h1>Utilisation d'un tableau</h1>
+
+        <p>Cliquez sur le bouton pour lancer la fonction&nbsp;: <button onclick="affiched()">Lancer la fonction</button></p>
+        <hr>
+        <h1>Boucles for</h1>
+
+        <button onclick="boucle()">Cliquez-moi!</button>
+        <button onclick="boucle2()">Cliquez-moi aussi!</button>
+        <hr>
+        <h1>Utilisation d'un test logique</h1>
+
+        <p>Cliquez sur le bouton pour lancer la fonction&nbsp;: <button onclick="affichee()">Lancer la fonction</button></p>
+        <hr>
+        <h1>Utilisation de switch et de l'objet Date</h1>
+
+        <p>Cliquez sur le bouton pour lancer la fonction&nbsp;: <button onclick="jourDeLaSemaine()">Lancer la fonction</button></p>
+        <hr>
+        <h1>Écriture d'une fonction complexe</h1>
+
+        <p>Cliquez sur le bouton pour lancer la fonction&nbsp;: <button onclick="afficheSurfaceDuCercle();
+                tableau()">Lancer la fonction</button></p>
+        <hr>
+
+        <h1>Utilisation de while</h1>
+
+        <p>Cliquez sur le bouton pour lancer la fonction&nbsp;: <button onclick="testWhile()">Lancer la fonction</button></p>
+        <hr>
+        <h1><strong>Premiers effets
+
+            </strong></h1>
+        <p>Ceci est <span onmouseover="this.style.color = 'red'" onmouseout="this.style.color = 'blue'" onclick="this.style.color = 'lime'" ondblclick="this.style.color = 'navy'">un texte</span> dont la couleur va changer en réaction à l'activité de la souris.</p>
+        <hr>
+        <h1>Changements de position</h1>
+        <!--
+        L'utilisation conjointe du positionnement à 50% du bord gauche, de la largeur et de la marge gauche d'une boîte permet de la centrer correctement.
+        -->
+        <p style="width:500px" onclick="this.style.position = 'relative';
+                this.style.left = '50%';
+                this.style.marginLeft = '-15px';
+                this.style.width = '30px';" ondblclick="this.style.position = 'relative';
+                        this.style.left = '';
+                        this.style.marginLeft = '';
+                        this.style.width = '500px';">Exemple de texte à géométrie variable. Exemple de texte à géométrie variable. Exemple de texte à géométrie variable. Exemple de texte à géométrie variable. Exemple de texte à géométrie variable. Exemple de texte à géométrie variable. Exemple de texte à géométrie variable. Exemple de texte à géométrie variable. Exemple de texte à géométrie variable. Exemple de texte à géométrie variable. Exemple de texte à géométrie variable. Exemple de texte à géométrie variable. Exemple de texte à géométrie variable.</p>
+
+        <hr>
+        <h1>Changements de police</h1>
+        <p onmouseover="this.style.textDecoration = 'line-through';
+                this.style.lineHeight = '200%';
+                this.style.fontFamily = 'Verdana';
+                this.style.fontSize = '150%';
+                this.style.textTransform = 'capitalize'" onmouseout="this.style.textDecoration = 'none';
+                        this.style.lineHeight = '100%';
+                        this.style.fontFamily = 'Times New Roman';
+                        this.style.fontSize = '100%';
+                        this.style.textTransform = 'none'">Nous allons complètement modifier ce paragraphe.<br>Nous allons complètement modifier ce paragraphe.</p>
+        <hr>
+        <h1>Premiers pas dans le DOM</h1>
+                <h1 id="pr" onclick="modif_paragraphe()" title="Quand on clique, modif du paragraphe">Grand titre</h1>
+        <p id="premier" onclick="centrage_h1()" title="Quand on clique, centrage du titre">Premier paragraphe original.</p>
+
     </body>
 </html>
