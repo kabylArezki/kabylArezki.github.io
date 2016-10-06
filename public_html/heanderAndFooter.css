@@ -7,17 +7,14 @@ and open the template in the editor.
     Created on : 29 sept. 2016, 20:43:25
     Author     : Arezki
 */
-html {
-    margin: auto;
 
-    width: 1500px;
-
-}
 body {
 
     background-color:#ccccff;
-    width: 832px;
 
+    margin: auto;
+
+    width: 840px;
 }
 header h1{
     position:absolute;
@@ -31,8 +28,8 @@ header{
    // background-image:url(image/Couverture-facebook-net-3.jpg);
    //background-image:url(image/couverture.jpg);
    background-image:url(image/footer_bg.jpg);
-    background-repeat: no-repeat;
-    width: 832px;
+   background-repeat: no-repeat;
+    width:  840px;
     height: 251px;
 
 
@@ -43,7 +40,7 @@ nav   {
     padding: 3px 0;   /* 3px top and bottom, 0px left and right */
     margin: 10px 0px 10px 0px;  /* top right bottom left */ 
     border-bottom: 1px solid #778; /* width style color */
-    width: 832px;
+    width:840px;
 
 }
 
