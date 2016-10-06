@@ -7,11 +7,7 @@ and open the template in the editor.
     Created on : 2 oct. 2016, 17:23:36
     Author     : Arezki
 */
-body{
-    width: 500px;
-    margin: auto;
-    background: aqua;
-}
+
 /* Positions des chiffres sur le cadran*/
 #chiffre12{position: absolute; top: 100px; left: 200px}
 #chiffre11{position: absolute; top: 113px; left: 150px}
