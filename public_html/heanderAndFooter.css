@@ -18,11 +18,17 @@ body {
     background-color:#ccccff;
     margin: auto;
     width: 900px;
+    
+}
+.corps{
+    height: 300px;
+    width: 900px;
+    background-color:activeborder;
 }
 header h1{
     position:absolute;
-    top: 120px;
-    left: 900px;
+    top: 140px;
+    left: 700px;
     font-size: 200%;
     color: black
 }
@@ -107,8 +113,8 @@ h2 ul il{
 }
 .arezki{
     position: absolute;
-    top: 340px;
-    left: 800px;
+    top: 310px;
+    left: 900px;
 }
 footer{
     background-image: url(imge/footer_bg.jpg);
