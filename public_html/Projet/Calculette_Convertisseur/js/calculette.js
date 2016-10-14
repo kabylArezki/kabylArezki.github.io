@@ -5,8 +5,8 @@
  */
 
 function calculer() {
-    var operande1 = parseInt(document.getElementById("op1").value);
-    var operande2 = parseInt(document.getElementById("op2").value);
+    var operande1 = parseFloat(document.getElementById("op1").value);
+    var operande2 = parseFloat(document.getElementById("op2").value);
     var operateur = document.getElementById("operateur").value;
 
   

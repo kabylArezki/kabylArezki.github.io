@@ -7,7 +7,7 @@
 
 function convertirTvsV() {
     
-var t = parseInt(document.getElementById("op1").value);
+var t = parseFloat(document.getElementById("op1").value);
 var f=((9/5)*t)+32;
 
   
@@ -15,7 +15,7 @@ var f=((9/5)*t)+32;
 
 }
 function convertirFvsT(){
-        var f = parseInt(document.getElementById("op2").value);
+        var f = parseFloat(document.getElementById("op2").value);
         var t=(5/9)*(f-32);
         
           document.getElementById("op1").value = t;
