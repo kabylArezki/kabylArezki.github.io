@@ -1,0 +1,29 @@
+/* 
+    Created on : 22 oct. 2015, 11:49:21
+    Author     : genoud
+*/
+body {
+    text-align: center;
+    font-family: Verdana, Geneva, sans-serif;
+}
+fieldset {
+    width:400px;
+    margin: auto;
+}
+#myCanvas{  
+    border: solid;
+    background-color:#99cc00;   
+}
+
+#canvas{  
+    border: solid;
+    background-color:#ccffff;   
+}
+#fleurcanvas{  
+    background-color:#ccffff;   
+}
+
+input[type="number"]{
+    
+    width:40px;
+}
