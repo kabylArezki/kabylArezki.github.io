@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Escaliers</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="js/escalier_pyramide.js" type="text/javascript"></script>
+        <link href="css/escalier_pyramide.css" rel="stylesheet" type="text/css"/>
+
+
+    </head>
+    <body onload="init()">
+        <div id="wrapper">
+            <h1>Dessiner un escalier</h1>
+            <div>
+                <p>
+                    <label>hauteur de marche (en px) :</label> <input type="text" id="hauteurMarche" value="10" size="5" />
+                    <label>nbre de marches :</label> <input type="text" id="nbreMarches" value="4" size="5" />
+                </p>
+                <p>
+                    <label>Couleur du trait : </label> <input type="color" id="trait" />
+                    <label>Couleur du remplissage : </label> <input type="color" id="remplissage"  />
+                </p>
+                <p>
+                    <label>Escalier Droit</label> <input type="radio" id="h" name="escalier_pyramide" value="esclier"/> &nbsp;
+                    <input type="radio" id="pyramide" name="escalier_pyramide" value="pyramide" /> <label>Escalier Pyramide</label>
+                </p>
+                <p>
+                    <input id="effacer" type="button" value="Effacer" />&nbsp;
+                    <input id="dessiner" type="button" value="Dessiner" />
+                </p>
+
+            </div>
+            <canvas  id="myCanvas" width="800" height ="600">
+                le canvas où seront dessinés les escaliers
+            </canvas>
+        </div>
+
+    </body>
+</html>
