@@ -5,6 +5,7 @@
  */
 
 function init() {
+    
     var Nvrai = Math.round(Math.random() * (10 - 0) + 0);
     var i = 0;
     document.getElementById("Jouer").onclick = function () {
