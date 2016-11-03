@@ -10,7 +10,7 @@ function init() {
     var i = 0;
     document.getElementById("Jouer").onclick = function () {
         i++;
-        if (i < 3) {
+        if (i <= 3) {
             var n = parseFloat(document.getElementById("n").value);
             if ((Nvrai == n)) {
                 document.getElementById("etat").innerHTML = "Bravo";
