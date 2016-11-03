@@ -5,46 +5,56 @@
  */
 
 function init() {
-    
+
     var Nvrai = Math.round(Math.random() * (10 - 0) + 0);
     var i = 0;
     document.getElementById("Jouer").onclick = function () {
         i++;
-        if (i <= 3) {
+        if (i < 3) {
             var n = parseFloat(document.getElementById("n").value);
             if ((Nvrai == n)) {
                 document.getElementById("etat").innerHTML = "Bravo";
                 document.getElementById("comentaire").innerHTML = "Vous avez gagné en " + 3 - i + " essais";
                 document.getElementById("etat").style.color = "green";
                 document.getElementById("comentaire").style.color = "green";
-            } else if(Nvrai<n){
+                i = 5;
+
+            } else if (Nvrai < n && 3 - i != 0) {
 
                 document.getElementById("etat").innerHTML = n + " est trop grand.";
-                document.getElementById("comentaire").innerHTML = "il vous reste " + 3 - i + " essai(s). Rejouez";
+                var k = 3 - i;
+                document.getElementById("comentaire").innerHTML = "il vous reste " + k + " essai(s). Rejouez";
                 document.getElementById("etat").style.color = "red";
                 document.getElementById("comentaire").style.color = "red";
-            } else if(Nvrai>n){
-
+            } else if (Nvrai > n && 3 - i != 0) {
+                var c = 3 - i;
                 document.getElementById("etat").innerHTML = n + " est trop petit .";
-                document.getElementById("comentaire").innerHTML = "il vous reste " + 3 - i + " essai(s). Rejouez";
+                document.getElementById("comentaire").innerHTML = "il vous reste " + c + " essai(s). Rejouez";
                 document.getElementById("etat").style.color = "red";
                 document.getElementById("comentaire").style.color = "red";
             }
             ;
+        } else if ((i == 3) && (Nvrai == n)) {
+            document.getElementById("etat").innerHTML = "Bravo";
+            document.getElementById("comentaire").innerHTML = "Vous avez gagné en " + 3 - i + " essais";
+            document.getElementById("etat").style.color = "green";
+            document.getElementById("comentaire").style.color = "green";
+            i = 5;
         } else {
             document.getElementById("etat").innerHTML = "Vous avez perdu";
             document.getElementById("comentaire").innerHTML = "Le nombre caché était " + Nvrai;
             document.getElementById("etat").style.color = "red";
             document.getElementById("comentaire").style.color = "red";
+            i = 5;
         }
-        ;
-
-        document.getElementById("Abandonner").onclick = function () {
-            var n = parseFloat(document.getElementById("n").value);
-            document.getElementById("etat").innerHTML = "Pourquoi abandonner ?";
-            document.getElementById("comentaire").innerHTML = "Le nombre caché  " + Nvrai;
-            document.getElementById("etat").style.color = "red";
-            document.getElementById("comentaire").style.color = "red";
-        };
     }
+    ;
+
+    document.getElementById("Abandonner").onclick = function () {
+        var n = parseFloat(document.getElementById("n").value);
+        document.getElementById("etat").innerHTML = "Pourquoi abandonner ?";
+        document.getElementById("comentaire").innerHTML = "Le nombre caché  " + Nvrai;
+        document.getElementById("etat").style.color = "red";
+        document.getElementById("comentaire").style.color = "red";
+    };
 }
