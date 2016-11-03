@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!--
+  une application simple d'animation utilisant l'API canvas de HTML5 
+-->
+<html>
+    <head>
+        <title>Les Chenilles</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <link href="css/chenille.css" rel="stylesheet" type="text/css"/>
+        <script src="js/chenille.js" type="text/javascript"></script>
+        
+    </head>
+    <body onload="init()">
+        <div id="wrapper">
+            <h1>Les Chenilles</h1>
+            <!-- le boutons pour lancer et interrompre l'animation -->
+            <div>
+                <button id="startBtn">Start</button>
+                <button id="stopBtn" disabled>Stop</button>
+            </div>
+            <br>
+            <!-- le canvas pour dessiner -->
+            <canvas  id="myCanvas" width="800" height ="800">
+                la zone de dessin, si ce message s'affiche c'est que
+                votre navigateur ne supporte pas la balise canvas de HTML5...
+                il serait temps de changer de version !
+            </canvas>
+        </div>
+    </body>
+</html>
