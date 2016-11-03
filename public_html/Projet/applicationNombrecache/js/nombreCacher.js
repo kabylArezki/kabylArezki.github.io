@@ -14,10 +14,11 @@ function init() {
             var n = parseFloat(document.getElementById("n").value);
             if ((Nvrai == n)) {
                 document.getElementById("etat").innerHTML = "Bravo";
-                document.getElementById("comentaire").innerHTML = "Vous avez gagné en " + 3 - i + " essais";
+                var d=3-i;
+                document.getElementById("comentaire").innerHTML = "Vous avez gagné en " + d + " essais";
                 document.getElementById("etat").style.color = "green";
                 document.getElementById("comentaire").style.color = "green";
-                i = 5;
+                i = i+5;
 
             } else if (Nvrai < n && 3 - i != 0) {
 
@@ -36,16 +37,17 @@ function init() {
             ;
         } else if ((i == 3) && (Nvrai == n)) {
             document.getElementById("etat").innerHTML = "Bravo";
-            document.getElementById("comentaire").innerHTML = "Vous avez gagné en " + 3 - i + " essais";
+            var t=3 -i;
+            document.getElementById("comentaire").innerHTML = "Vous avez gagné en " + t + " essais";
             document.getElementById("etat").style.color = "green";
             document.getElementById("comentaire").style.color = "green";
-            i = 5;
-        } else {
+            i = i+5;
+        } else if ((i == 3) && (Nvrai != n)){
             document.getElementById("etat").innerHTML = "Vous avez perdu";
             document.getElementById("comentaire").innerHTML = "Le nombre caché était " + Nvrai;
             document.getElementById("etat").style.color = "red";
             document.getElementById("comentaire").style.color = "red";
-            i = 5;
+            i = i+5;
         }
     }
     ;
