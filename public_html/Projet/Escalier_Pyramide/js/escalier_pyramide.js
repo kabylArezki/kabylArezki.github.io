@@ -6,8 +6,8 @@
 
 /**
  * dessine un rectangle 
- * @param {type} x abscisse du coin supérieur gauche du rectangle
- * @param {type} y ordonnée du coin supérieur gauche du rectangle
+ * @param {type} x abscisse du coin supÃ©rieur gauche du rectangle
+ * @param {type} y ordonnÃ©e du coin supÃ©rieur gauche du rectangle
  * @param {type} L longueur du rectangle
  * @param {type} H hauteur du rectangle
  * @param {string} couleurTrait la couleur du contour du rectangle
@@ -68,7 +68,7 @@ function effacer() {
 }
 
 /**
- * fonction appelée au chargement de la  if (documentgetElementById("escalier").checked=="true") { page
+ * fonction appelÃ©e au chargement de la  if (documentgetElementById("escalier").checked=="true") { page
  */
 function init() {
     var canvas = document.getElementById("myCanvas");

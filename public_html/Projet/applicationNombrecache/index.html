@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>jQuery UI Tabs - Default functionality</title>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="/resources/demos/style.css">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="js/nombreCacher.js" type="text/javascript"></script>
+        <script>
+            $(function () {
+                $("#tabs").tabs();
+            });
+        </script>
+    </head>
+    <body  onload=init()>
+
+        <div id="tabs">
+            <ul>
+                <li><a href="#tabs-1">Jouer</a></li>
+                <li><a href="#tabs-2">Aide</a></li>             
+            </ul>
+            <div id="tabs-1">
+                <div>
+                    <input type="submit" id="partie" value="Nouvelle partie" name="Nouvelle partie" onclick=init() />
+
+                </div>
+                <h1>Nombre Inconnu</h1>
+                <p> Trouvez en 3 tentatives au plus un nombre compris entre 0 et 10</p>
+                <label>Votre proposition :</label> <input type="text" id="n" name="N" value="0" size="2" />
+                <p id="etat">
+
+                </p>
+                <p id="comentaire">
+
+                </p>
+                <div>
+                    <input type="submit" id="Jouer" value="Jouer" name="Jouer"  />&nbsp;
+                    <input type="submit" id="Abandonner" value="Abandonner" name="Abandonner" />
+
+                </div>
+            </div>
+            <div id="tabs-2">
+                <p>Le jeu du nombre caché est un jeu très simple. Vous jouez contre un programme JavaSacript s'exécutant dans votre navigateur web. Au début d'une partie ce programme choisi un nombre au hasard entre 0 et 100 : le nombre caché.<br>
+
+                    Vous disposez ensuite de 10 essais pour essayer de découvrir ce nombre.A chaque tentative le programme affiche comment votre proposition se situe par rapport à ce nombre caché : </p>
+                <ul>
+                    <li>Trop grand.</li>
+                    <li>Trop petit.</li>
+                    <li>C'est la bonne réponse.</li>
+                </ul>
+                <p> Si au bout de 10 essais vous n'avez pas trouvé le nombre caché, celui-ci vous est révélé.<br>
+
+                    Il est possible d'abandonner en cours de partie et de demander à connaître le nombre caché.<br>
+
+                    Une fois la partie terminée (le nombre caché a été trouvé ou le nombre d'essais maximum a été dépassé ou sur abandon) il est possible de débuter une nouvelle partie en cliquant sur le bouton Rejouer.
+                </p>
+            </div>
+        </div>
+    </body>
+</html>
