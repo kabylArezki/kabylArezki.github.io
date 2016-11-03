@@ -9,9 +9,10 @@ function init() {
     var Nvrai = Math.round(Math.random() * (10 - 0) + 0);
     var i = 0;
     document.getElementById("Jouer").onclick = function () {
+    var n = parseFloat(document.getElementById("n").value);
         i++;
         if (i < 3) {
-            var n = parseFloat(document.getElementById("n").value);
+            
             if ((Nvrai == n)) {
                 document.getElementById("etat").innerHTML = "Bravo";
                 var d=3-i;
@@ -37,7 +38,7 @@ function init() {
             ;
         } else if ((i == 3) && (Nvrai == n)) {
             document.getElementById("etat").innerHTML = "Bravo";
-            var t=3 -i;
+            var t=i;
             document.getElementById("comentaire").innerHTML = "Vous avez gagné en " + t + " essais";
             document.getElementById("etat").style.color = "green";
             document.getElementById("comentaire").style.color = "green";
