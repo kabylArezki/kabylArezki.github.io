@@ -23,6 +23,7 @@ function Anneaux(canvas, x, y, r, coleurInterne, coleurExterne) {
     this.coleurInterne = coleurInterne;
     this.coleurExterne = coleurExterne;
     this.dessiner = function () {
+        var ctx = this.canvas.getContext("2d");
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2, true);
         ctx.strokeStyle = this.coleurInterne;
@@ -30,19 +31,19 @@ function Anneaux(canvas, x, y, r, coleurInterne, coleurExterne) {
         ctx.fill();
         ctx.stroke();
     }
-    this.prototype.placerA = function (px, py) {
-        this.x = px;
-        this.y = py;
-    }
+
 }
+
 function Tete(canvas, x, y, r, coleurInterne, coleurExterne) {
     this.canvas = canvas;
     this.x = x;
     this.y = y;
     this.r = r;
+    this.c = 0;
     this.coleurInterne = coleurInterne;
     this.coleurExterne = coleurExterne;
     this.dessiner = function () {
+        var ctx = this.canvas.getContext("2d");
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2, true);
         ctx.strokeStyle = this.coleurInterne;
@@ -50,37 +51,38 @@ function Tete(canvas, x, y, r, coleurInterne, coleurExterne) {
         ctx.fill();
         ctx.stroke();
     }
-    this.prototype.placerA = function (px, py) {
-        this.x = px;
-        this.y = py;
-    }
+
     this.devierCap = function (deltaC) {
-        this.deltaC = deltaC;
+        this.cap += deltaC;
     }
     this.deplacerSelonCap = function () {
-//        x' = x + R * cos(cap) et y' = y + R * sin(cap)
-        var cap = Math.floor((Math.random() * Math.PI / 6) + (-Math.PI / 6));
-        this.x = x + this.r * Math.cos(cap);
-        this.y = y + this.r * Math.sin(cap);
+
+
+        this.cap = Math.floor(Math.random() * (this.c + Math.PI / 12 - (this.c - Math.PI / 12) + 1)) + this.c - Math.PI / 12;
+        this.x += this.r * Math.cos(this.cap);
+        this.y += this.r * Math.sin(this.cap);
     }
     this.apOK = function (canvas) {
-        if (this.x < this.r || this.x > (this.canvas.width - this.r) || (this.y < this.r || this.y > (this.canvas.height - this.r))) {
-            return true;
+        this.ok = false;
+        if (this.x <= this.r || this.x >= (this.canvas.width - this.r) || (this.y <= this.r || this.y >= (this.canvas.height - this.r))) {
+            this.ok = true;
         }
+        return this.ok;
 
     }
-
 }
+
 
 function Chenille(canvas, nbAnneaux, r) {
     this.canvas = canvas;
     this.nbAnneaux = nbAnneaux;
     this.r = r;
-    this.tete = new Tete(canvas, canvas.width / 2, canvas.height / 2, this.r, "red", "red");
+    this.tete = new Tete(canvas, canvas.width / 2, canvas.height / 2, this.r, "red", "black");
     this.tab = new Array(this.nbAnneaux);
     for (var i = 0; i < this.tab.length; i++) {
-        this.tab[i] = new Anneaux(canvas, canvas.width / 2 - (this.r + i * this.r), canvas.height / 2, this.r, "red", "red");
+        this.tab[i] = new Anneaux(canvas, canvas.width / 2 - (this.r + i * this.r), canvas.height / 2, this.r, "black", "red");
     }
+    ;
     this.dessiner = function () {
         this.tete.dessiner();
         for (var i = 0; i < this.tab.length; i++) {
@@ -88,30 +90,34 @@ function Chenille(canvas, nbAnneaux, r) {
         }
     }
     this.deplacer = function () {
-        while (tete.apOK(canvas)) {
-            tete.devierCap(Math.PI / 10);
-        }
+        while (this.tete.apOK(canvas)) {
 
-        for (var i = 0; i < this.tab.length; i++) {
-            this.tab[this.tab.length - i - 1].this.x = this.tab[this.tab.length - i].this.x;
-            this.tab[this.tab.length - i - 1].this.y = this.tab[this.tab.length - i].this.y;
+            this.tete.devierCap(Math.PI / 6);
+
+            this.tete.x += this.tete.r * Math.cos(this.tete.cap);
+            this.tete.y += this.tete.r * Math.sin(this.tete.cap);
+            this.tete.c = this.tete.cap;
         }
-        this.tab[0].this.x = tete.this.x;
-        this.tab[0].this.y = tete.this.y;
-        tete.deplacerSelonCap();
+        for (var i = this.tab.length - 1; i > 0; i--) {
+            this.tab[i].x = this.tab[i - 1].x;
+            this.tab[i].y = this.tab[i - 1].y;
+        }
+        this.tab[0].x = this.tete.x;
+        this.tab[0].y = this.tete.y;
+        this.tete.deplacerSelonCap();
     }
 }
 
 
 function init() {
 
-    
+
     var canvas = document.getElementById("myCanvas");
-    var ctx = canvas.getContext("2d");
-
-
-    var chenille1 = new Chenille(canvas, 8, 30);
+    var ctxt = canvas.getContext("2d");
+    var chenille1 = new Chenille(canvas, 10, 30);
+    var chenille2 = new Chenille(canvas, 10, 30);
     chenille1.dessiner();
+    chenille2.dessiner();
 
 
     // association au bouton Start d'un traitement qui lance l'animation
@@ -123,11 +129,13 @@ function init() {
         // réaffiche les chenilles
         timerId = setInterval(function () {
             // la fonction invoquée périodiquement (toutes les 20 ms) par le timer
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctxt.clearRect(0, 0, canvas.width, canvas.height);
             chenille1.deplacer();
+            chenille2.deplacer();
             chenille1.dessiner();
-            
-        }, 20);
+            chenille2.dessiner();
+
+        }, 60);
     };
 
     // association au bouton Stop d'un traitement qui interrompt l'animation
