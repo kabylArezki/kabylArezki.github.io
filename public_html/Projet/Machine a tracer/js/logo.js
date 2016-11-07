@@ -113,7 +113,7 @@ function init() {
     var canvas = document.getElementById("myCanvas");
     var totue = new Tortue(canvas);
     var ctxt = canvas.getContext('2d');
-    var d = parseFloat(document.getElementById("d").value);
+    
     document.getElementById("position").innerHTML = "Latortue est dans ( " + totue.x + " et " + totue.y + " )en position baisser";
 
 
@@ -165,7 +165,8 @@ function init() {
         totue.trace.push(a.action);
     };
     document.getElementById("avancer").onclick = function () {
-        totue.avancer(50);
+        var d = parseFloat(document.getElementById("d").value);
+        totue.avancer(d);
         var a = new Instruction();
         a.action = "A";
         a.x = totue.x;
