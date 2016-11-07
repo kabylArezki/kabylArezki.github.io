@@ -114,7 +114,7 @@ function init() {
     var totue = new Tortue(canvas);
     var ctxt = canvas.getContext('2d');
 
-    document.getElementById("position").innerHTML = "Latortue est dans ( " + totue.x + " et " + totue.y + " )en position baisser";
+    document.getElementById("position").innerHTML = "La tortue est dans ( " + totue.x + " et " + totue.y + " )en position baisser";
 
 
     document.getElementById("aller").onclick = function () {
@@ -124,7 +124,7 @@ function init() {
         totue.x = x;
         var y = parseFloat(document.getElementById("y").value);
         totue.y = y;
-        document.getElementById("position").innerHTML = "Latortue est dans ( " + totue.x + " et " + totue.y + " )en position baisser";
+        document.getElementById("position").innerHTML = "La tortue est dans ( " + totue.x + " et " + totue.y + " )en position baisser";
         var a = new Instruction();
         a.action = "A";
         a.x = totue.x;
