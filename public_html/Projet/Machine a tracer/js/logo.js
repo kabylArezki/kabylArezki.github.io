@@ -15,11 +15,11 @@ function Instruction() {
     this.x;
     this.y;
 }
-//-- méthodes ------------------------------------------------------------------
+//-- mï¿½thodes ------------------------------------------------------------------
 
 /**
- * remet la tortue dans son état inital
- * cap 0°, placée au centre du canvas en position haute
+ * remet la tortue dans son ï¿½tat inital
+ * cap 0ï¿½, placï¿½e au centre du canvas en position haute
  * @returns {undefined}
  */
 Tortue.prototype.reset = function () {
@@ -40,20 +40,20 @@ Tortue.prototype.dessiner = function () {
     ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
     // sauvegarde du contexte graphique
     ctx.save();
-    // definition de la transformation géométrique positionnant la tortue
+    // definition de la transformation gï¿½omï¿½trique positionnant la tortue
     ctx.translate(this.x, this.y);
     ctx.rotate(this.cap * Math.PI / 180);
-    // definition du triangle matérialisant la tortue.
-    // les coordonnées du tracé de la tortue sont exprimées en centrant
+    // definition du triangle matï¿½rialisant la tortue.
+    // les coordonnï¿½es du tracï¿½ de la tortue sont exprimï¿½es en centrant
     // la tortue en 0, 0 et on l'orientant horizontalement vers la droite
-    // ces coordonnées subiront la translation et rotation précédentes au
+    // ces coordonnï¿½es subiront la translation et rotation prï¿½cï¿½dentes au
     // moment de l'affichage
     ctx.beginPath();
     ctx.moveTo(20, 0);
     ctx.lineTo(-8, 10);
     ctx.lineTo(-8, -10);
     ctx.closePath();
-    // définition de la couleur de remplissage et de la couleur du trait
+    // dï¿½finition de la couleur de remplissage et de la couleur du trait
     ctx.fillStyle = "#66ff66";
     if (this.haute) {
         ctx.strokeStyle = "green";
@@ -61,44 +61,44 @@ Tortue.prototype.dessiner = function () {
         ctx.strokeStyle = "red";
     }
     ctx.lineWidth = 3;
-    // remplisage et tracé du contour du triangle
+    // remplisage et tracï¿½ du contour du triangle
     ctx.fill();
     ctx.stroke();
-    // définition du cercle matérialisant la position de la tortue
+    // dï¿½finition du cercle matï¿½rialisant la position de la tortue
     ctx.beginPath();
     ctx.arc(0, 0, 3, 0, Math.PI * 2, true);
-    // définition de la couleur de remplissage
+    // dï¿½finition de la couleur de remplissage
     ctx.fillStyle = "black";
     // remplissage du cercle
     ctx.fill();
-    // restoration du contexte graphique dans son état initial
+    // restoration du contexte graphique dans son ï¿½tat initial
     ctx.restore();
 };
 
 /**
- * fait avancer la tortue d'une distance donnée dans la direction indiquée
+ * fait avancer la tortue d'une distance donnï¿½e dans la direction indiquï¿½e
  * par son cap.
  * @param {type} distance : la distance de laquelle la tortue doit se deplacer
  * @returns {undefined}
  */
 Tortue.prototype.avancer = function (distance) {
-    // Attention, les fonctions sinus et consinus prennent comme paramètre
-    // des valeurs en radians. Le cap exprimé en degrés doit donc être 
+    // Attention, les fonctions sinus et consinus prennent comme paramï¿½tre
+    // des valeurs en radians. Le cap exprimï¿½ en degrï¿½s doit donc ï¿½tre 
     // converti en radians.
     this.x = Math.round(this.x + distance * Math.cos(Math.PI * this.cap / 180));
     this.y = Math.round(this.y + distance * Math.sin(Math.PI * this.cap / 180));
     this.dessiner();
 };
 Tortue.prototype.tournerGauche = function (angle) {
-    // Attention, les fonctions sinus et consinus prennent comme paramètre
-    // des valeurs en radians. Le cap exprimé en degrés doit donc être 
+    // Attention, les fonctions sinus et consinus prennent comme paramï¿½tre
+    // des valeurs en radians. Le cap exprimï¿½ en degrï¿½s doit donc ï¿½tre 
     // converti en radians.
     this.cap -= angle;
     this.dessiner();
 };
 Tortue.prototype.tournerDroite = function (angle) {
-    // Attention, les fonctions sinus et consinus prennent comme paramètre
-    // des valeurs en radians. Le cap exprimé en degrés doit donc être 
+    // Attention, les fonctions sinus et consinus prennent comme paramï¿½tre
+    // des valeurs en radians. Le cap exprimï¿½ en degrï¿½s doit donc ï¿½tre 
     // converti en radians.
     this.cap += angle;
     this.dessiner();
@@ -125,6 +125,11 @@ function init() {
         var y = parseFloat(document.getElementById("y").value);
         totue.y = y;
         document.getElementById("position").innerHTML = "Latortue est dans ( " + totue.x + " et " + totue.y + " )en position baisser";
+        var a = new Instruction();
+        a.action = "A";
+        a.x = totue.x;
+        a.y = totue.y;
+        totue.trace.push(a);
         totue.dessiner();
     };
 
