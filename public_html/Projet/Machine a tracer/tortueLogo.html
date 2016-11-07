@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Tortue LOGO</title>
+        <meta charset="windows-1252">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="js/logo.js" type="text/javascript"></script>
+        <link href="css/logo.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body style="width: 800px; margin: auto ;text-align: center" onload="init()" >
+        <h1 style="text-align: center">Dessinez avec la tortue LOGO</h1>
+        <div>
+            <input id="reset" type="submit" value="Reset" name="reset"/>&nbsp;
+            <input id="avancer" type="submit" value="Avancer" name="avancer" />&nbsp;
+            <input id="tournerGauche" type="submit" value="tournerGauche" name="tournerGauche" />&nbsp;
+            <input id="tournerDroite" type="submit" value="tournerDroite" name="tournerDroite" />&nbsp;
+            <input id="lever" type="submit" value="Baisser" name="lever" />&nbsp;
+            <input id="jouer" type="submit" value="Tracer" name="jouer" />
+        </div>
+        <div>
+            <input id="debut" type="submit" value="Debut" name="debut" />&nbsp;
+            <input id="fin" type="submit" value="Fin" name="fin" />&nbsp;
+            <label>Distance  </label><input id="d" type="text" name="distance " value="0" size="3" />&nbsp;
+            <label>Angle de retation  </label><input id="angle" type="text" name="angleDeRotation" value="0" size="3" />&nbsp;
+        </div>
+        <div>
+            <label>Baisser : </label><input id="b" type="text" name="b" value="0" size="3" />&nbsp;
+            <label>Lever : </label><input id="l" type="text" name="b" value="0" size="3" />
+        </div>
+        <div>
+            <input id="aller" type="submit" value="Aller A" name="allerA" />&nbsp;
+            <label>X: </label><input id="x" type="text" name="x" value="0" size="3" />&nbsp;
+            <label>Y: </label><input id="y" type="text" name="y" value="0" size="3" />&nbsp;
+            <label>cap: </label><input id="cap" type="text" name="cap" value="0" size="3" />
+        </div>
+        <div>
+            <p id="position">
+
+            </p>
+        </div>
+        <canvas id="myCanvas" style="border: 2px solid black" width="800" height="600" > </canvas>
+    </body>
+</html>
