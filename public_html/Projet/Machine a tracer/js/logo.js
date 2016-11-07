@@ -103,7 +103,7 @@ Tortue.prototype.tournerDroite = function (angle) {
     this.cap += angle;
     this.dessiner();
 };
-Tortue.prototype.changerPositionEcritureG = function (position) {
+Tortue.prototype.changerPositionEcritureB = function (position) {
     this.y -= position;
 };
 Tortue.prototype.changerPositionEcritureL = function (position) {
@@ -195,7 +195,7 @@ function init() {
     document.getElementById("lever").onclick = function () {
         var c = document.getElementById("lever").value;
 
-        if (c === "Lever") {
+        if (c =="Lever") {
             document.getElementById("lever").value = "Baisser";
             var b = parseFloat(document.getElementById("b").value);
             totue.changerPositionEcritureB(b);
