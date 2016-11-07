@@ -114,7 +114,7 @@ function init() {
     var totue = new Tortue(canvas);
     var ctxt = canvas.getContext('2d');
 
-    document.getElementById("position").innerHTML = "La tortue est dans ( " + totue.x + " et " + totue.y + " )en position baisser";
+    document.getElementById("position").innerHTML = "La tortue est dans la position  ( " + totue.x + " et " + totue.y + " )";
 
 
     document.getElementById("aller").onclick = function () {
@@ -124,7 +124,7 @@ function init() {
         totue.x = x;
         var y = parseFloat(document.getElementById("y").value);
         totue.y = y;
-        document.getElementById("position").innerHTML = "La tortue est dans ( " + totue.x + " et " + totue.y + " )en position baisser";
+        document.getElementById("position").innerHTML = "La tortue est dans la position  ( " + totue.x + " et " + totue.y + " )";
         var a = new Instruction();
         a.action = "A";
         a.x = totue.x;
@@ -150,7 +150,7 @@ function init() {
     document.getElementById("reset").onclick = function () {
         totue.reset();
         totue.trace.splice(0, totue.trace.length);
-        document.getElementById("position").innerHTML = "La tortue est dans ( " + totue.x + " et " + totue.y + " )en position baisser";
+        document.getElementById("position").innerHTML = "La tortue est dans la position ( " + totue.x + " et " + totue.y + " )";
     };
     document.getElementById("debut").onclick = function () {
         document.getElementById("debut").disabled = true;
@@ -177,18 +177,18 @@ function init() {
         a.x = totue.x;
         a.y = totue.y;
         totue.trace.push(a);
-        document.getElementById("position").innerHTML = "La tortue est dans ( " + totue.x + " et " + totue.y + " )en position baisser";
+        document.getElementById("position").innerHTML = "La tortue est dans la position ( " + totue.x + " et " + totue.y + " )";
         totue.dessiner();
     };
     document.getElementById("tournerGauche").onclick = function () {
         var angle = parseFloat(document.getElementById("angle").value);
-        document.getElementById("position").innerHTML = "La tortue est dans ( " + totue.x + " et " + totue.y + " )en position baisser";
+        document.getElementById("position").innerHTML = "La tortue est dans la position ( " + totue.x + " et " + totue.y + " )";
 
         totue.tournerGauche(angle);
     };
     document.getElementById("tournerDroite").onclick = function () {
         var angle = parseFloat(document.getElementById("angle").value);
-        document.getElementById("position").innerHTML = "La tortue est dans ( " + totue.x + " et " + totue.y + " )en position baisser";
+        document.getElementById("position").innerHTML = "La tortue est dans la position  ( " + totue.x + " et " + totue.y + " )";
 
         totue.tournerDroite(angle);
     };
@@ -205,7 +205,7 @@ function init() {
             a.x = totue.x;
             a.y = totue.y;
             totue.trace.push(a);
-            document.getElementById("position").innerHTML = "La tortue est dans ( " + totue.x + " et " + totue.y + " )en position baisser";
+            document.getElementById("position").innerHTML = "La tortue est dans la position  ( " + totue.x + " et " + totue.y + " )";
 
             totue.dessiner();
         } else {
@@ -219,7 +219,7 @@ function init() {
             a.y = totue.y;
             totue.trace.push(a);
 
-            document.getElementById("position").innerHTML = "La tortue est dans ( " + totue.x + " et " + totue.y + " )en position baisser";
+            document.getElementById("position").innerHTML = "La tortue est dans la position  ( " + totue.x + " et " + totue.y + " )";
 
             totue.dessiner();
         }
