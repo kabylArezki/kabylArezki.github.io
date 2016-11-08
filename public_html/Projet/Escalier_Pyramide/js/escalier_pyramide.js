@@ -33,7 +33,8 @@ function rectangle(x, y, L, H, couleurTrait, couleurRemplissage) {
  * @param {string} couleurRemplissage la couleur de remplissage du rectangle
  */
 function dessiner_marches(nbMarches, hauteur, couleurTrait, couleurRemplissage) {
-
+    var canvas = document.getElementById("myCanvas");
+    var graphicContext = canvas.getContext("2d");
     var x = 0;
     var y = 0;
     var largeur = hauteur;
@@ -46,22 +47,21 @@ function dessiner_marches(nbMarches, hauteur, couleurTrait, couleurRemplissage) 
 function dessiner_pyramide(nbMarches, hauteur, couleurTrait, couleurRemplissage) {
     var canvas = document.getElementById("myCanvas");
     var graphicContext = canvas.getContext("2d");
-    var x =0;
+    var x = 0;
     var y = 0;
     var largeur = hauteur;
     for (var i = 1; i <= nbMarches; i++) {
-        x =(800/2)-(largeur/2);
+        x = (800 / 2) - (largeur / 2);
         rectangle(x, y, largeur, hauteur, couleurTrait, couleurRemplissage);
         y = y + hauteur;
         largeur = largeur + hauteur;
-        
     }
 }
 
 /**
  * efface le canvas
  */
-function effacer() {
+function effacer(canvas) {
     var canvas = document.getElementById("myCanvas");
     var graphicContext = canvas.getContext("2d");
     graphicContext.clearRect(0, 0, canvas.width, canvas.height);
@@ -73,24 +73,20 @@ function effacer() {
 function init() {
     var canvas = document.getElementById("myCanvas");
     var graphicContext = canvas.getContext("2d");
-    if (document.getElementById("h").checked == true) {
 
-        document.getElementById("dessiner").onclick = function () {
-            var nb = parseInt(document.getElementById("nbreMarches").value);
-            var hauteur = parseInt(document.getElementById("hauteurMarche").value);
-            dessiner_marches(nb, hauteur, "c", "c");
-        };
-    }
-    if (document.getElementById("pyramide").checked == true) {
-        document.getElementById("dessiner").onclick = function () {
+    document.getElementById("dessiner").onclick = function () {
+        if (document.getElementById("pyramide").checked == true) {
             var nb = parseInt(document.getElementById("nbreMarches").value);
             var hauteur = parseInt(document.getElementById("hauteurMarche").value);
             dessiner_pyramide(nb, hauteur, "c", "c");
         };
-    }
-
+        if (document.getElementById("h").checked == true) {
+            var nb = parseInt(document.getElementById("nbreMarches").value);
+            var hauteur = parseInt(document.getElementById("hauteurMarche").value);
+            dessiner_marches(nb, hauteur, "c", "c");
+        };
+    };
     document.getElementById("effacer").onclick = function () {
         effacer(canvas);
     };
-
 }

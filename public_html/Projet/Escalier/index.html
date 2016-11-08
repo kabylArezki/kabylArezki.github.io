@@ -12,7 +12,7 @@ and open the template in the editor.
         <link href="css/escalier.css" rel="stylesheet" type="text/css"/>
         <script src="js/escalier.js" type="text/javascript"></script>
     </head>
-    <body>
+    <body onload="init()">
         <header>
             <h1>Dessiner un escalier</h1>
         </header>
@@ -27,8 +27,8 @@ and open the template in the editor.
             </div>
             <div>
 
-                <input type="button" name="H" value="Effacer" onclick="effacer()"  />&nbsp;
-                <input type="button" name="H" value="Dessiner" onclick="dessiner()"  />
+                <input id="e" type="button" name="H" value="Effacer" onclick="effacer()"  />&nbsp;
+                <input id="d" type="button" name="H" value="Dessiner" onclick="dessiner()"  />
             </div>
         </section>
         <canvas id="c" width="800" height="800" style="background-color:aqua;border: 3px solid black ">
