@@ -140,8 +140,8 @@ h2 ul il{
 footer{
 
     bottom: 0;
-    position: fixed;
-    left: 475px;
+    position: relative;
+    left: 250px;
     width: 900px;
 
 

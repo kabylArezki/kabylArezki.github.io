@@ -109,12 +109,13 @@ Tortue.prototype.changerPositionEcritureB = function (position) {
 Tortue.prototype.changerPositionEcritureL = function (position) {
     this.y += position;
 };
+
 function init() {
     var canvas = document.getElementById("myCanvas");
     var totue = new Tortue(canvas);
     var ctxt = canvas.getContext('2d');
+document.getElementById("position").innerHTML ="La tortue est dans la position  ( " + totue.x + " et " + totue.y + " )";
 
-    document.getElementById("position").innerHTML ="La tortue est dans la position  ( " + totue.x + " et " + totue.y + " )";
 
 
     document.getElementById("aller").onclick = function () {
