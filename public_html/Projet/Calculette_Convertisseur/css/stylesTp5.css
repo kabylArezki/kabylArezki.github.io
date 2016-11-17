@@ -7,7 +7,10 @@ and open the template in the editor.
     Created on : 12 oct. 2016, 21:30:53
     Author     : Arezki
 */
-
+* {
+    margin:0px;
+    padding: 0px;
+}
 body {
     text-align: center;
     font-family: Verdana, Geneva, sans-serif;

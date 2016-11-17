@@ -7,7 +7,10 @@ and open the template in the editor.
     Created on : 7 nov. 2016, 20:21:46
     Author     : Arezki
 */
-
+* {
+    margin:0px;
+    padding: 0px;
+}
 div{
     margin-top: 10px;
     margin-bottom: 10px   

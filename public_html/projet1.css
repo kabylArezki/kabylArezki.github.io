@@ -7,6 +7,10 @@ and open the template in the editor.
     Created on : 1 oct. 2016, 19:54:29
     Author     : Arezki
 */
+* {
+    margin:0px;
+    padding: 0px;
+}
 body{
      margin: auto;
     width: 800px;

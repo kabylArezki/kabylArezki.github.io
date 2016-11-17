@@ -7,6 +7,10 @@ and open the template in the editor.
     Created on : 29 sept. 2016, 21:38:29
     Author     : Arezki
 */
+* {
+    margin:0px;
+    padding: 0px;
+}
 
 .u{
     font-weight: bold;
