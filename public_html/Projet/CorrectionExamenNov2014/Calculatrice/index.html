@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>Calculatrice JS</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <script src="scripts/calculette.js"></script>
+        <style>
+            body {
+                text-align: center;
+                font-family: Verdana, Geneva, sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+        <p>Calculatrice JavaScript</p>
+        <div>
+            <input id="op1" name="operande1" value="0" size="3" type="text">
+            <select id="operateur" name="operation">
+                <option>+</option>
+                <option>-</option>
+                <option selected="selected">*</option>
+                <option>/</option>
+            </select>
+            <input id="op2" name="operande2" value="0" size="3" type="text">
+            <button onclick="calculer()">=</button>
+            <span id="resultat">0</span>
+        </div>
+    
+
+</body></html>

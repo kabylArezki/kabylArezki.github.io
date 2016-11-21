@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8"/>
+	<link rel="stylesheet" href="styles/stylesPhotos.css" />
+	<script type="text/javascript" src="scripts/jquery.js"></script>
+    <script type="text/javascript" src="scripts/jquery.lightbox-0.5.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles/jquery.lightbox-0.5.css" media="screen" />
+	<title>Photos</title>
+	<!-- Activation de jQuery lightBox plugin -->
+    <script type="text/javascript">
+    $(function() {
+        $('#gallery a').lightBox();
+    });
+    </script>
+</head>
+<body>
+<div id="wrapper">
+    <header>
+	      <h1>Mon site personnel</h1>
+		  <h2>Ma gallerie de photos</h2>
+	</header>
+	<!-- le menu de navigation -->
+
+	<nav>
+		<ul>
+            <li><a href="index.html">Acceuil</a></li>
+            <li><a href="cv.html" >Mon CV</a></li>
+			<li><a href="agenda.html" >Agenda</a></li>
+            <li><a href="photos.html" id="encours">Photos</a></li>
+			<li><a href="realisations.html">Réalisations</a></li>
+        </ul>
+	</nav>
+
+	<!-- le contenu de la page -->
+	<section id="gallery">
+	<div class="img">
+		<a href="./images/photos/photo1.jpg" title="Audrey et Noria à l'entrainement"><img src="./images/photos/photo1Small.jpg" width="110" height="90" /></a>
+		<div class="desc">Audrey et Noria en action</div>
+	</div>
+	<div class="img">
+		<a href="./images/photos/photo2.jpg" title="Départ pour 2 jours de camping par -25°C"><img src="./images/photos/photo2Small.jpg" width="110" height="90" /></a>
+		<div class="desc">Traineau au Yukon</div>
+	</div>
+	<div class="img">
+		<a href="./images/photos/photo3.jpg" title="Arts Umbrella - Janvier 2009"><img src="./images/photos/photo3Small.jpg" width="110" height="90" /></a>
+		<div class="desc">Elodie à Arts Umbrella</div>
+	</div>
+	<div class="img">
+		<a href="./images/photos/image1.jpg" title="Une photo de fleur"><img src="./images/photos/thumb_image1.jpg" width="110" height="90" /></a>
+		<div class="desc">Une photo de fleur</div>
+	</div>
+	<div class="img">
+		<a href="./images/photos/image2.jpg" title="Une autre photo de fleur"><img src="./images/photos/thumb_image2.jpg" width="110" height="90" /></a>
+		<div class="desc">Une autre photo de fleur</div>
+	</div>
+	<div class="img">
+		<a href="./images/photos/image3.jpg" title="Une photo de fleur"><img src="./images/photos/thumb_image3.jpg" width="110" height="90" /></a>
+		<div class="desc">Une photo de fleur</div>
+	</div>
+	<div class="img">
+		<a href="./images/photos/image4.jpg" title="Une autre photo de fleur"><img src="./images/photos/thumb_image4.jpg" width="110" height="90" /></a>
+		<div class="desc">Une autre photo de fleur</div>
+	</div>
+	<div class="img">
+		<a href="./images/photos/image5.jpg" title="Une autre photo de fleur"><img src="./images/photos/thumb_image5.jpg" width="110" height="90" /></a>
+		<div class="desc">Encore une autre photo de fleur</div>
+	</div>
+	</section>
+</body>
+</html>

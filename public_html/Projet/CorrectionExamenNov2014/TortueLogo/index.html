@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tortue LOGO</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="styles/tortue.css" type="text/css">
+        <script src="scripts/Tortue.js"></script>
+    </head>
+    <body onload="init()">
+        <h1>Dessinez avec la tortue LOGO</h1>
+        <div>
+            <button id="resetBtn">Reset</button>  
+            <button id="avancerBtn">Avancer</button>
+            <button id="tournerGBtn">Tourner G</button>
+            <button id="tournerDBtn">Tourner D</button>
+            <button id="etatTortueBtn">Baisser</button>
+        </div>
+        <div>
+            distance: <input type="text" id="distance" value="50" size="3"/>
+            angle de rotation:  <input type="text" id="angle" value="45" size="3"/>
+        </div>
+        <div>
+            <button id="allerABtn">Aller A</button>
+            <label>x: </label>
+            <input type="text" id="newX" value="50" size="3"/>
+            <label>y: </label><input type="text" id="newY" value="59" size="3"/>
+            <label>cap: </label><input type="text" id="newCap" value="0" size="3"/>
+        </div>
+        <div id="message">
+        </div>
+        <canvas  id="myCanvas" width="600" height ="400">
+            La canvas pour dessiner la tortue
+        </canvas>
+    </body>
+
+</html>

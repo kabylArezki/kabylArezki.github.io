@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Fleurs</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                text-align: center;
+                font-family: Verdana, Geneva, sans-serif;
+            }
+            canvas { 
+                border:1px solid;
+                background-color: lightcyan;
+            }
+            wrapper {
+                width: 800px;
+                margin:auto;
+                color: #d4fbf5
+            }
+            input[type="number"] {
+                width:50px;
+            }
+        </style>
+        <script src="js/fleurs.js"></script>
+    </head>
+    <body>
+        <div id="wrapper">
+            <p>
+                Nbre de fleurs par ligne: 
+                <input id="nbFleurs"  type="number" min="5" max="50" value="10" onchange="dessineChampDeFleurs();"/>
+            </p>
+            <canvas id="canvas" height="600" width="600">
+            </canvas>
+        </div>
+        <script>
+            dessine1Fleur();
+        </script>
+    </body>
+</html>

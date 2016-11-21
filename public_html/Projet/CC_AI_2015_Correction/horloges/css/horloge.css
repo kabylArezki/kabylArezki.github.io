@@ -1,0 +1,53 @@
+* {
+    margin:0px;
+    padding: 0px;
+    
+}
+
+/*
+   règle permettant de supprimer toutes les marges externes et internes
+   par défaut. Les marges des éléments devront être ensuite données 
+   explicitement dans les règles de style CSS.
+*/
+
+#wrapper {
+    margin: 0 10% ;
+    background-color:lightblue;
+    text-align: center;
+    font-family: Verdana, Arial, sans-serif;  
+}
+
+h1 {
+    color: white;
+    background-color: blue;
+}
+
+p {
+    margin:15px;
+}
+
+.chiffresHorloge {
+    font-family: "Lucida Console", Courier, monospace;
+    background-color: black;
+    color: white;
+    font-weight: bolder;
+    padding: 5px;
+}
+
+.horloge {
+    background-color: grey;
+    display: inline-block;
+    margin:10px;
+    font-size: 1.5em;
+    padding: 5px 10px ;
+}
+
+.horloge p {
+    font-style: italic;
+    margin: 0px;
+}
+
+#credits {
+    font-size: 0.7em;
+}
+

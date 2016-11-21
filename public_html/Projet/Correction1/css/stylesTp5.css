@@ -1,0 +1,12 @@
+/* 
+    Created on : 22 oct. 2015, 11:49:21
+    Author     : genoud
+*/
+body {
+    text-align: center;
+    font-family: Verdana, Geneva, sans-serif;
+}
+fieldset {
+    width:300px;
+    margin: auto;
+}

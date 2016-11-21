@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="styles/stylesAccueil.css" />
+        <title>Accueil</title>
+    </head>
+    <body>
+        <div id="wrapper">
+            <header>
+                <h1>Mon site personnel</h1>
+                <h2>Accueil</h2>
+            </header>
+            <!-- le menu de navigation -->
+
+            <nav>
+                <ul>
+                    <li><a href="index.html" id="encours">Acceuil</a></li>
+                    <li><a href="cv.html" >Mon CV</a></li>
+                    <li><a href="agenda.html" >Agenda</a></li>
+                    <li><a href="photos.html" >Photos</a></li>
+                    <li><a href="realisations.html">Réalisations</a></li>
+                </ul>
+            </nav>
+
+            <!-- le contenu de la page -->
+            <section>
+                <h2>Bienvenue sur mon mini site web</h2>
+                <img src="images/menu.png" id="menu" usemap="#map" />
+
+                <map name="map" id="map">
+                    <!-- #$-:Image map file created by GIMP Image Map plug-in -->
+                    <!-- #$-:GIMP Image Map plug-in by Maurits Rijk -->
+                    <!-- #$-:Please do not edit lines starting with "#$" -->
+                    <!-- #$VERSION:2.3 -->
+                    <!-- #$AUTHOR:genoud -->
+                    <area shape="circle" coords="118,107,95" href="http://ufrima.imag.fr" onMouseOver="menu.src = 'images/menu1.png';" onMouseOut="menu.src = 'images/menu.png';" />
+                    <area shape="circle" coords="262,308,99" href="cv.html" onMouseOver="menu.src = 'images/menu3.png';" onMouseOut="menu.src = 'images/menu.png'"/>
+                    <area shape="circle" coords="396,109,106" href="https://imag-moodle.e.ujf-grenoble.fr/login/index.php" onMouseOver="menu.src = 'images/menu2.png';" onMouseOut="menu.src = 'images/menu.png';" />
+                </map>
+            </section>
+        </div>
+    </body>
+</html>

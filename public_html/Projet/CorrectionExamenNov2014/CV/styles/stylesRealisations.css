@@ -1,0 +1,31 @@
+/* 
+    Created on : 11 janv. 2015, 19:29:44
+    Author     : genoud
+*/
+
+@import url('stylesCommuns.css');
+
+.titre {
+    background-color: blue;
+    color:white;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+.exemple {
+    background-color: #d4fbf5;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.vignette {
+    float: right;
+    text-align: center;
+    font-size: 0.8em;
+    font-style: italic;
+}
+.exemple ul {
+    padding-left: 40px;
+}
+.spacer {
+    clear: both;
+}

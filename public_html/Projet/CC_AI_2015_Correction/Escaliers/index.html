@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Escaliers</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                text-align: center;
+                font-family: Verdana, Geneva, sans-serif;
+            }
+            canvas { 
+                border:1px solid;
+                background-color: greenyellow;
+            }
+            wrapper {
+                width: 800px;
+                margin:auto;
+                color: #d4fbf5
+            }
+        </style>
+
+    </head>
+    <body onload="init()">
+        <div id="wrapper">
+            <h1>Dessiner un escalier</h1>
+            <div>
+                <p>
+                    <label>Hauteur de marche (en pixels) :</label> <input type="text" id="hauteurMarche" value="10" size="5" />
+                    <label>Nombre de marches :</label> <input type="text" id="nbreMarches" value="4" size="5" />
+                </p>
+                <p>
+                    Couleur du trait: <input type="color" id="strokeColor" value="#FF0000"> Couleur de remplissage: <input type="color" id="fillColor" value="#FFFF00">
+                </p>
+                <p>
+                    Escalier Droit <input type="radio" id="escalier" name="typeTrace" checked> <input type="radio" id="pyramide" name="typeTrace"> Escalier Pyramidal
+                </p>
+                <p>
+                    <input id="effacer" type="button" value="Effacer" /> 
+                    <input id="dessiner" type="button" value="Dessiner" />
+                </p>
+            </div>
+            <canvas  id="myCanvas" width="800" height ="400">
+                le canvas où sera dessinée la pyramide
+            </canvas>
+        </div>
+        <script src="js/pyramide.js"></script>
+    </body>
+</html>    
+
+

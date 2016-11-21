@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8"/>
+	<link rel="stylesheet" href="styles/stylesAgenda.css" />
+</head>
+<body>
+<div id="wrapper">
+    <header>
+	      <h1>Mon site personnel</h1>
+		  <h2>Agenda de la semaine</h2>
+	</header>
+	<!-- le menu de navigation -->
+
+	<nav>
+		<ul>
+            <li><a href="index.html">Acceuil</a></li>
+            <li><a href="cv.html">Mon CV</a></li>
+			<li><a href="cv.html" id="encours">Agenda</a></li>
+            <li><a href="photos.html">Photos</a></li>
+			<li><a href="realisations.html">Réalisations</a></li>
+        </ul>
+	</nav>
+
+	<!-- le contenu de la page -->
+	<section id="contenu">
+		<table id="agenda">
+			<thead>
+				<tr>
+					<th>Horaires</th>
+					<th>Lundi</th>
+					<th>Mardi</th>
+					<th>Mercredi</th>
+					<th>Jeudi</th>
+					<th>Vendredi</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>8h-10h</td>
+					<td class="anglais">Anglais</td>
+					<td></td>
+					<td class="bd">Bases de données</td>
+					<td class="web" rowspan="2">Technologies du Web</td>
+					<td class="prog" rowspan="2">Programmation</td>
+				</tr>
+				<tr>
+					<td>10h-12h</td>
+					<td class="reseaux">Réseaux</td>
+					<td class="algo">Algorithmique</td>
+					<td class="gl">Génie Logiciel</td>
+				</tr>
+				<tr class="separateur">
+					<td colspan="6"></td>
+				</tr>
+				<tr>
+					<td>13h-15h</td>
+					<td class="bd" rowspan="2">Bases de données</td>
+					<td class="prog" rowspan="2">Programmation</td>
+					<td class="syst">Systèmes</td>
+					<td class="sport" rowspan="2">Sport</td>
+					<td class="anglais">Anglais</td>
+				</tr>
+				<tr>
+					<td>15h-17h</td>
+					<td></td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+		<table class="legende">
+			<tbody>
+			    <tr>
+				  <td class="algo"></td>
+				  <td>Algorithmique</td>
+				  <td class="gl"></td>
+				  <td>Génie Logiciel</td>
+				  <td class="sport"></td>
+				  <td>Sport</td>
+				</tr>
+				<tr>
+					<td class="anglais"></td>
+					<td>Anglais</td>
+					<td class="prog"></td>
+					<td>Programmation</td>
+					<td class="syst"></td>
+				    <td>Systèmes</td>
+				</tr>
+				<tr>
+					<td class="bd"></td>
+					<td>Bases de données</td>
+					<td class="reseaux"></td>
+					<td>Réseaux</td>
+					<td class="web"></td>
+				    <td>Technologies du Web</td>
+				</tr>
+			</tbody>
+		</table>
+	</section>
+	</div>
+</body>
+</html>

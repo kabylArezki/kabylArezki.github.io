@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--
+Cette page affiche des horloges donnant l'heure locale de différentes
+métropoles du monde.
+-->
+<html>
+    <head>
+        <title>Horloges</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/horloge.css" rel="stylesheet" type="text/css"/>
+        <link rel="shortcut icon" type="image/png" href="images/clock.png" />
+        <script src="js/horloge.js" type="text/javascript"></script>
+    </head>
+    <body onload="demarrerHorloges();">
+        <div id="wrapper">
+            <h1>Fuseaux horaires</h1>
+            <p>Les États définissent l'heure locale sur leur territoire à l'aide d'un décalage 
+                fixe par rapport au temps universel coordonné (UTC).
+            </p>
+            <p>
+                De façon générale, les pays tendent à utiliser un fuseau horaire 
+                de telle façon que l'heure solaire moyenne
+                sur leur territoire ne soit pas trop éloignée de l'heure légale 
+                (c'est-à-dire, par exemple, pour que le midi solaire ne soit pas trop 
+                éloigné du midi légal). 
+            </p>
+            <h1>Horloges</h1>
+            <p>Quelques horloges de grandes villes du monde.</p>
+            <!--
+              création et affichage des différentes horloges
+            -->
+            <script>
+                creerHorloges();
+            </script>
+            
+            <p id="credits">
+                Ces horloges sont animées grâce au langage JavaScript.<br>
+             Les images des drapeaux ont été fournies par <a href="http://www.icondrawer.com">www.icondrawer.com</a>
+        </div>
+
+    </body>
+</html>
