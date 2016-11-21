@@ -34,19 +34,21 @@ function ellipse(ctx, cx, cy, rx, ry, angle, style) {
     ctx.restore();
 }
 function dessiner() {
-    var k=parseFloat(document.getElementById("nbr").value);
-    k=k-1;
-    var ctx = document.getElementById("c").getContext("2d");
-    for (var i = 0; i < 2*k; i++) {
-        ellipse(ctx, 300, 300, 200, 40, (90/k)*i, 'blue');
-        
+    var k = parseFloat(document.getElementById("nbr").value);
+    k = k - 1;
+    var canvas = document.getElementById("c");
+    var ctx = canvas.getContext("2d");
+    for (var i = 0; i < 2 * k; i++) {
+        ellipse(ctx, canvas.width / 2, canvas.height / 2, 200, 40, (90 / k) * i, 'blue');
+
     }
 }
 function effacer() {
+    var canvas = document.getElementById("c");
+    var ctx = canvas.getContext("2d");
 
-    var ctx = document.getElementById("c").getContext("2d");
 
-        ctx.clearRect(0,0,800,800);
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    
+
 }
