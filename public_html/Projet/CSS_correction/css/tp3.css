@@ -1,0 +1,128 @@
+/* 
+    Created on : 6 oct. 2016, 12:38:43
+    Author     : genoud
+*/
+/* 
+question 1 :  titres de niveau 1 (<h1>) doivent être centrés et entourés d'une
+bordure solide de manière à occuper les 3/4 de la largeur de la fenêtre.
+on utilise un sélecteur de balise, car tous les éléments h1 seront affectés.
+*/
+h1 {
+    text-align: center;  /* texte centré (dans la zone occupée par l'élément h1)*/
+    border: solid; /* bordure solide : trait plein */
+    width: 75%;    /* largeur de l'élément h1 : 3/4 de la fenêtre */
+    margin: auto;  /* marges automatiques afin que l'élément h1 soit centré dans
+                     la fenêtre*/
+}
+
+/*
+question 2: Les titres de niveau 2 (<h2>) situés à l'intérieur de sections
+doivent apparaître avec un texte blanc sur fond violet.
+on utilise une combinaison de sélecteurs, seuls les éléments <h2> descendants
+d'un élément <section> doivent être affectés.
+*/
+section h2 {
+    color: white;  /* couleur du texte */
+    background-color: blueviolet; /* couleur du fond */
+}
+
+/*
+question 3 a: Chaque paragraphe débute avec un décallage de 16 pixels.
+on utilise un sélecteur de balise, cette règle s'applique à tous les paragraphes
+*/
+p {
+    text-indent: 16px;
+}
+
+/*
+question 3 b: les paragraphe en dehors d'une section sont en italique.
+on peut redéfinir cette règle de la manière suivante :
+tous les paragraphes sont en italique sauf ceux qui sont définit à l'intérieur
+d'une section.
+On va donc définir deux règles, une pour tous les paragraphes (sélecteur de balise),
+l'autre uniquement pour les paragraphes descendant d'un élément <section> (sélecteur
+combiné)
+*/
+p {
+    font-style: italic; /* on aurait pu combiner cette règle avec la précédente */
+}
+section p {
+    font-style: normal;
+}
+
+/*
+question 3 c : La première lettre du premier paragraphe de chaque section est 
+affichée avec une taille deux fois plus grande et une couleur rouge.
+
+Pour accéder au premier paragraphe d'une section il faut utiliser la combinaison
+   section  >  p:first-of-type   pour dire que c'est un paragraphe qui est 
+                   descendant direct (child) d'une section, et que c'est le premier.
+                   La pseudo classe CSS3 :first-of-type et l'équivalent à la 
+                   pseudo-classe CSS3 :nth-of-type(1).
+Pour accéder à la première lettre du paragraphe il faut ajouter le sélecteur
+de pseudo élément  ::first-letter.
+*/
+section > p:first-of-type::first-letter {
+    font-size: 2em; /* 2 fois la taille normale */
+    color:red;
+}
+
+/* question 4.1: les listes numérotées sont affichées de sorte que :
+les chiffres de premier niveau soient des chiffres romains majuscules.
+Il s'agit des éléments <li> qui descendent directement (child) d'un élément
+<ol>
+*/
+ol > li {
+    list-style-type: upper-roman;
+}
+/* question 4.2:
+les chiffres de deuxième niveau soient des lettres,
+Il s'agit des éléments <li> qui descendent directement (child) d'un élément
+<ol> qui lui même est enfant d'un élément <li> enfant d'un élément <ol>
+*/
+ol > li > ol > li {
+    list-style-type: lower-alpha;
+}
+/* question 4.3:
+les chiffrent de troisième niveau soient des chiffres romains minuscules.
+encore un niveau !
+*/
+ol > li > ol > li > ol > li {
+    list-style-type: lower-roman;
+}
+
+/*question 5:
+Les listes numérotées situées à l'intérieur d'une section sont affichées:
+- sur fond gris 
+- avec un cadre pointillé,
+- avec une marge gauche de 30 pixels et une marge haute de 40 pixels,
+- une marge interne de 15 pixels en haut et en bas,
+occupent 60% de la largeur de la fenêtre.
+
+ces règles doivent s'appliquer à des listes numérotées <ol> descendantes d'une
+section, mais pas à des liste numérotés qui pourraient se trouver à l'intérieur
+des premières. Il faut donc définir deux règles:
+- la première avec le selecteur 'section ol' qui applique les styles ci-dessus  
+- la deuxième avec le sélecteur 'section ol ol' qui annule les styles pour les 
+  élements <ol> imbriqués.
+*/
+section  ol {
+    background-color: lightgray;  /* fond gris*/
+    border-style: dashed; /* cadre pointillé */
+    margin-top: 40px; /* marge (externe) du  haut de 40 pixels */
+    margin-left: 30px;  /* marge (externe) du bas de 30 pixels */
+    padding-top: 15px;  /* marge interne à gauche de 15 pixels */
+    padding-bottom: 15px; /* marge interne à droite de 15 pixels */
+    width:60%;
+}
+
+section ol ol {
+    width: inherit; /* hérite la largeur de son conteneur */
+    border-style: none;  /* pas de bordure */
+    margin: initial;  /* remise des valeurs par défaut pour les marges externes */
+    /* on ne peut pas faire de même pour les marges internes car cela remettrait
+       à 0 aussi les marges gauches et droites; il faut donc le faire côté par côté.
+    */
+    padding-top: 0px; 
+    padding-bottom: 0px;
+}

@@ -1,0 +1,52 @@
+/*
+ * sélecteurs de balise, s'applique à tous les élements inclus dans la balise
+ */
+body {
+    background-image: url("../images/parchemin2.jpg");  /* chemin relatif à partir de l'endroit où se trouve le feuille css */
+}
+
+h2 {
+    color: blue;
+    background-color: goldenrod;
+}
+
+h1 {
+    text-align: center;
+}
+
+p {
+    text-indent: 16px;
+    text-align: justify;
+}
+
+/*
+ * sélecteur de classe, s'applique à tous les éléments dont la balise a un attribut class
+ * correspondant au nom de la classe de style. 
+ */
+.surligne {
+    background-color: yellow;
+}
+
+/*
+ * sélecteurs d'identifiants, s'applique à tous les éléments dont la balise a un id
+ * correspondant au nom de la classe de style. 
+ */
+#cadre1 {
+    border-style: solid;
+    font-style: italic;
+}
+
+#cadre2 {
+    border-style:dashed;
+    background-color: rgba(0, 0, 255, 0.15);
+}
+
+/*
+ * sélecteur de pseudo élément
+ */
+p::first-letter {
+    font-size: 1.8em;
+    color: red;
+    font-weight: bolder;
+}
+

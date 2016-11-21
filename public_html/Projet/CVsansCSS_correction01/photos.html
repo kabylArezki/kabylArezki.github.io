@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Photos</title>
+        <script type="text/javascript" src="scripts/jquery.js"></script>
+        <script type="text/javascript" src="scripts/jquery.lightbox-0.5.js"></script>
+        <link rel="stylesheet" type="text/css" href="styles/jquery.lightbox-0.5.css" media="screen" />
+        <!-- Activation de jQuery lightBox plugin -->
+        <script type="text/javascript">
+            $(function () {
+                $('#gallery a').lightBox();
+            });
+        </script>
+    </head>
+    <body>
+        <div id="wrapper">
+            <!-- l'en-tête de la page -->
+            <header>
+                <h1>Mon site personnel</h1>
+                <h2>Ma gallerie de photos</h2>
+            </header>
+            <!-- le menu de navigation -->
+            <nav>
+                <ul>
+                    <li><a href="index.html">Acceuil</a></li>
+                    <li><a href="cv.html" >Mon CV</a></li>
+                    <li><a href="agenda.html" >Agenda</a></li>
+                    <li><a href="#">Photos</a></li>
+                </ul>
+            </nav>
+
+            <!-- le contenu de la page -->
+            <section id="gallery">
+                <h2>Ma gallerie de photographies</h2>
+                <div>
+                    <a href="./images/photos/image1.jpg" title="Fleur bleue">
+                        <img src="./images/photos/thumb_image1.jpg" alt="photo de fleur bleue" width="110" height="90" />
+                    </a>
+                    <div>Fleur bleue</div>
+                </div>
+                <div>
+                    <a href="./images/photos/image2.jpg" title="Feuilles d'érable">
+                        <img src="./images/photos/thumb_image2.jpg" alt="photo de feuilles d'érable" width="110" height="90" />
+                    </a>
+                    <div>Feuilles d'érable</div>
+                </div>
+                <div>
+                    <a href="./images/photos/image3.jpg" title="Gouttes d'eau sur des feuilles">
+                        <img src="./images/photos/thumb_image3.jpg" alt="photo de feuilles avec gouttes d'eau" width="110" height="90" />
+                    </a>
+                    <div>Gouttes d'eau sur des feuilles</div>
+                </div>
+                <div>
+                    <a href="./images/photos/image4.jpg" title="Gouttes d'eau sur des feuilles">
+                        <img src="./images/photos/thumb_image4.jpg" alt="photo de feuilles avec gouttes d'eau" width="110" height="90" /></a>
+                    <div>Gouttes d'eau sur des feuilles</div>
+                </div>
+                <div>
+                    <a href="./images/photos/image5.jpg" title="Gouttes d'eau sur des feuilles">
+                        <img src="./images/photos/thumb_image5.jpg" alt="photo de feuilles avec gouttes d'eau" width="110" height="90" /></a>
+                    <div>Encore une autre photo de gouttes d'eau sur des feuilles</div>
+                </div>
+            </section>
+        </div>
+    </body>
+</html>
